@@ -1,14 +1,13 @@
 #!/usr/bin/env groovy
 
 // See https://github.com/capralifecycle/jenkins-pipeline-library
-@Library('cals') _
+@Library('cals@sonarcloud') _ // TODO: Remove branch override
 
 buildConfig {
   dockerNode {
     checkout scm
 
-    def img = docker.image('circleci/node:11-browsers')
-    img.pull()
+    def img = docker.build('builder')
     img.inside {
       stage('Install dependencies') {
         sh 'npm ci'
@@ -21,6 +20,11 @@ buildConfig {
       stage('Run normal tests') {
         sh 'npm test'
       }
+
+      analyzeSonarCloudForNodejs([
+        'sonar.organization': 'capraconsulting',
+        'sonar.projectKey': 'capraconsulting_webapp-baseline',
+      ])
 
       stage('Generate build') {
         sh 'npm run build'
