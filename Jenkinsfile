@@ -7,8 +7,7 @@ buildConfig {
   dockerNode {
     checkout scm
 
-    def img = docker.build('builder')
-    img.inside {
+    insideToolImage('node:12-alpine') {
       stage('Install dependencies') {
         sh 'npm ci'
       }
@@ -29,7 +28,11 @@ buildConfig {
       stage('Generate build') {
         sh 'npm run build'
       }
+    }
 
+    def img = docker.image('circleci/node:12-browsers')
+    img.pull() // Ensure latest.
+    img.inside {
       stage('Run e2e tests') {
         sh 'npm run test:e2e:jenkins'
       }
