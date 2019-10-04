@@ -1,5 +1,9 @@
-node_modules/
-dist/
+*.iml
+out/
+.gradle/
 build/
-.DS_Store
-*.log
+.idea/
+*.iml
+target/
+config_override/
+node_modules/
