@@ -1,10 +1,10 @@
-# Baseline for creating web apps
+# Frontend application for ForwardAuth
 
-[![Build Status](https://jenkins.capra.tv/buildStatus/icon?job=cals-baselines/webapp-baseline/master)](https://jenkins.capra.tv/job/cals-baselines/job/webapp-baseline/job/master/)
-
-Technologies:
+## Technologies:
 
 - React
+- Material UI
+- Recharts
 - TypeScript
 - Webpack
 - Jest
@@ -14,8 +14,10 @@ Technologies:
 - Autoprefixer
 
 ## Using config-files for environment-specific configuration
-
-The directory `/config` contains some JSON-files in which you can store configuration for you application. Webpack will copy the files from this folder to `/build/config` when you build your application. When deploying the application, please ensure that you include the configuration file for the environment you are deplying to.
+The directory `/config` contains some JSON-files in which you can store configuration for you application. 
+Webpack will copy the files from this folder to `/build/config` when you build your application. 
+When deploying the application, please ensure that you include the configuration file for the 
+environment you are deplying to.
 
 **Example**
 
