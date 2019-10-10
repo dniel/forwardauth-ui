@@ -11,7 +11,7 @@ The application shoud provide a nice interface for the administrator of ForwardA
 - see the current configuration easily for debugging
 - see historic graph of a period how usage has been.
 
-The ordinary user shoudd get 
+The ordinary user should get 
 - error pages for forwardauth when permission was denied or errors occured.
 - a userinfo profile page
 - a signout page
