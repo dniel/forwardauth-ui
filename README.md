@@ -1,10 +1,10 @@
 # Frontend application for ForwardAuth
 
+The goal for this application is to be a single page application javascript application providing a nice looking
+interface for the [ForwardAuth application](https://github.com/dniel/traefik-forward-auth0). 
 
-
-https://themes.material-ui.com/
-
-
+![Screenshot from material-ui site](/docs/React%20Templates%20_%20Material-UI%20Themes.png "Screenshot from material-ui site")
+Borrowed screenshot from https://themes.material-ui.com/ to visualize how I hope the application will look like.
 
 ## Technologies:
 
