@@ -6,6 +6,18 @@ interface for the [ForwardAuth application](https://github.com/dniel/traefik-for
 ![Screenshot from material-ui site](/docs/React%20Templates%20_%20Material-UI%20Themes.png "Screenshot from material-ui site")
 Borrowed screenshot from https://themes.material-ui.com/ to visualize how I hope the application will look like.
 
+The application shoud provide a nice interface for the administrator of ForwardAuth to
+- see all events like signing, authorizations, authentications, signouts in a dashboard.
+- see the current configuration easily for debugging
+- see historic graph of a period how usage has been.
+
+The ordinary user shoudd get 
+- error pages for forwardauth when permission was denied or errors occured.
+- a userinfo profile page
+- a signout page
+- maybe even a custom implemented login screen instead of the original from auth0? 
+ 
+
 ## Technologies:
 
 - React
